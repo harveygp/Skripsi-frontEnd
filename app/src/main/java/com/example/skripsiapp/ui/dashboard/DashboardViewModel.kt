@@ -42,8 +42,8 @@ class DashboardViewModel @Inject constructor(
         _pageNumber.value = index
     }
 
-    fun getUserData(nama : String , peminatan : Boolean, universitas : Int) {
-        if (true) {
+    fun getUserData(nama : String , peminatan : String, universitas : Int) {
+        if (peminatan == "IPS") {
             when (universitas) {
                 0 -> {
                     viewModelScope.launch(Dispatchers.IO) {

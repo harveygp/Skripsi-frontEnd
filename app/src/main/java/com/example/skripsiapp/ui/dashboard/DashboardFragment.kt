@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.skripsiapp.adapter.ScoreResponseAdapter
 import com.example.skripsiapp.data.remote.response.DataResponse
 import com.example.skripsiapp.databinding.FragmentDashboardBinding
+import com.example.skripsiapp.utils.SharedPreferencesHelper
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -21,6 +22,7 @@ class DashboardFragment : Fragment() {
     private val binding get() = _binding!!
     private val dashboardViewModel: DashboardViewModel by activityViewModels()
     private lateinit var recycleUser: RecyclerView
+    private val sharedPreferences by lazy { SharedPreferencesHelper(requireContext()) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +42,7 @@ class DashboardFragment : Fragment() {
         recycleUser.layoutManager = layoutManager
 
         dashboardViewModel.pageNumber.observe(viewLifecycleOwner){
-            showData("AERO CAKRA FADLULLAH",true, it)
+            showData(sharedPreferences.prefNama.toString() ,sharedPreferences.prefPeminatan.toString(), it)
         }
 
         dashboardViewModel.data.observe(viewLifecycleOwner) {
@@ -57,7 +59,7 @@ class DashboardFragment : Fragment() {
         _binding = null
     }
 
-    private fun showData(nama : String,peminatan : Boolean,universtias : Int = 1){
+    private fun showData(nama : String,peminatan : String,universtias : Int = 1){
         dashboardViewModel.getUserData(nama,peminatan,universtias)
     }
 

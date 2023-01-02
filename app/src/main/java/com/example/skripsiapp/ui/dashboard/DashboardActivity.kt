@@ -9,6 +9,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.skripsiapp.R
 import com.example.skripsiapp.databinding.ActivityDashboardBinding
 import com.example.skripsiapp.domain.adapter.UserUnivPagerAdapter
+import com.example.skripsiapp.utils.SharedPreferencesHelper
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
@@ -18,13 +19,14 @@ class DashboardActivity : AppCompatActivity() {
 
     private val binding by lazy { ActivityDashboardBinding.inflate(layoutInflater) }
     private val dashboardViewModel by viewModels<DashboardViewModel>()
+    private val sharedPreferences by lazy { SharedPreferencesHelper(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
         supportActionBar?.elevation = 0f
-//        supportActionBar?.title = "My text"
+        supportActionBar?.title = sharedPreferences.prefNama.toString()
 
         init()
     }

@@ -18,7 +18,6 @@ class UserRepositoryImpl @Inject constructor(
         try {
             emit(Result.Loading())
             val response = api.getUserIpsUpnvj(nama)
-            Log.d("data", response.toString())
             emit(Result.Success(response))
         }catch(e : HttpException){
             emit(Result.Error(e.localizedMessage ?: "An Error Occurred"))
@@ -31,7 +30,6 @@ class UserRepositoryImpl @Inject constructor(
         try {
             emit(Result.Loading())
             val response = api.getUserIpsUnj(nama)
-            Log.d("data", response.toString())
             emit(Result.Success(response))
         }catch(e : HttpException){
             emit(Result.Error(e.localizedMessage ?: "An Error Occurred"))
@@ -44,7 +42,6 @@ class UserRepositoryImpl @Inject constructor(
         try {
             emit(Result.Loading())
             val response = api.getUserIpsUinj(nama)
-            Log.d("data", response.toString())
             emit(Result.Success(response))
         }catch(e : HttpException){
             emit(Result.Error(e.localizedMessage ?: "An Error Occurred"))
@@ -57,7 +54,6 @@ class UserRepositoryImpl @Inject constructor(
         try {
             emit(Result.Loading())
             val response = api.getUserIpaUpnvj(nama)
-            Log.d("data", response.toString())
             emit(Result.Success(response))
         }catch(e : HttpException){
             emit(Result.Error(e.localizedMessage ?: "An Error Occurred"))
@@ -70,7 +66,6 @@ class UserRepositoryImpl @Inject constructor(
         try {
             emit(Result.Loading())
             val response = api.getUserIpaUnj(nama)
-            Log.d("data", response.toString())
             emit(Result.Success(response))
         }catch(e : HttpException){
             emit(Result.Error(e.localizedMessage ?: "An Error Occurred"))
@@ -83,7 +78,6 @@ class UserRepositoryImpl @Inject constructor(
         try {
             emit(Result.Loading())
             val response = api.getUserIpaUinj(nama)
-            Log.d("data", response.toString())
             emit(Result.Success(response))
         }catch(e : HttpException){
             emit(Result.Error(e.localizedMessage ?: "An Error Occurred"))

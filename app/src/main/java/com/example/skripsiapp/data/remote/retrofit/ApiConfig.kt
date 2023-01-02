@@ -1,7 +1,9 @@
 package com.example.skripsiapp.data.remote.retrofit
 
 import com.example.skripsiapp.BuildConfig
+import com.example.skripsiapp.data.repository.LoginRepositoryImpl
 import com.example.skripsiapp.data.repository.UserRepositoryImpl
+import com.example.skripsiapp.domain.UserRepository.LoginRepository
 import com.example.skripsiapp.domain.UserRepository.UserRepository
 import dagger.Module
 import dagger.Provides
@@ -36,6 +38,10 @@ object ApiConfig {
     @Provides
     @Singleton
     fun provideUserRepository(api : ApiService) : UserRepository = UserRepositoryImpl(api)
+
+    @Provides
+    @Singleton
+    fun provideLoginRepository(api : ApiService) : LoginRepository = LoginRepositoryImpl(api)
 
 
 }
