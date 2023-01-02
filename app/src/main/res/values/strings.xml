@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SkripsiApp</string>
+
+    <string name="edt_nama">Nama</string>
+    <string name="edt_peminatan">Peminatan</string>
+    <string name="btn_masuk">Masuk</string>
+    <string name="tv_mata_kuliah">Matakuliah</string>
+    <string name="tv_nilai">Nilai\t\t\t\t\t\t\t\t:</string>
+    <string name="tv_plch_mata_kuliah">Matakuliah</string>
+    <string name="tv_plch_nilai">xx.xx</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_matakuliah">Matakuliah\t\t:</string>
+    <string name="tab_univ_upnvj">UPNVJ</string>
+    <string name="tab_univ_unj">UNJ</string>
+    <string name="tab_univ_uinj">UINJ</string>
+</resources>

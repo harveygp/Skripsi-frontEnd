@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/mtrl_edt_color_state</item>
+        <item name="boxStrokeWidth">3dp</item>
+    </style>
+
+    <style name="TextInputDropDownLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxStrokeColor">@color/mtrl_edt_color_state</item>
+        <item name="boxStrokeWidth">3dp</item>
+        <item name="endIconTint">@color/primary_green</item>
+        <item name="colorOnSurface">@color/primary_green</item>
+    </style>
+
+    <style name="MaterialButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="backgroundTint">@color/mtrl_btn_color_state</item>
+    </style>
+
+    <style name="Theme.App" parent="Theme.MaterialComponents">
+        ...
+        <item name="tabStyle">@style/Widget.App.TabLayout</item>
+    </style>
+
+    <style name="Widget.App.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.TabLayout</item>
+        <item name="tabTextAppearance">@style/TextAppearance.AppCompat.Button</item>
+    </style>
+
+    <style name="ThemeOverlay.App.TabLayout" parent="">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorSurface">@color/primary_green</item>
+        <item name="colorOnSurface">@color/white</item>
+    </style>
+</resources>
