@@ -13,7 +13,6 @@ import com.example.skripsiapp.databinding.ActivityLoginBinding
 import com.example.skripsiapp.ui.dashboard.DashboardActivity
 import com.example.skripsiapp.utils.SharedPreferencesHelper
 import dagger.hilt.android.AndroidEntryPoint
-import java.util.*
 
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
@@ -49,7 +48,7 @@ class LoginActivity : AppCompatActivity() {
                     loginViewModel.getStudentData(edtName.text.toString().uppercase(),edtDropdownInputRole.text.toString().uppercase())
                 }
                 else{
-                    Toast.makeText(this@LoginActivity,"Masukan Semua Value Terlebih Dahulu",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@LoginActivity,"Masukan Semua Data Terlebih Dahulu",Toast.LENGTH_SHORT).show()
                 }
             }
 

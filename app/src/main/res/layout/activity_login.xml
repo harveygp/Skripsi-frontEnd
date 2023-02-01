@@ -13,7 +13,6 @@
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:hint="@string/edt_nama"
-        android:textColorHint="@color/text_subtitle"
         app:hintTextColor="@color/primary_green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

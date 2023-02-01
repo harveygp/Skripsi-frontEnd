@@ -7,6 +7,18 @@
     android:orientation="vertical"
     tools:context=".ui.dashboard.DashboardActivity">
 
+    <ImageView
+        android:id="@+id/img_wifi_off"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_baseline_wifi_off_24"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/connection" />
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
         style="@style/Widget.App.TabLayout"
